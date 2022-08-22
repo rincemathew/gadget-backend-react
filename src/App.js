@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    axios.get('https://www.gadget4india.com/release/api/release/').then((response)=>{
+      console.log(response)
+      console.log('hai')
+    })
+    console.log('2')
+  }, [])
+  console.log('3')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>This is admin of gadget4 india</h1>
+
     </div>
   );
 }
